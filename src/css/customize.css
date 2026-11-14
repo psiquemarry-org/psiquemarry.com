@@ -1,0 +1,257 @@
+.customize__head {
+  padding-top: clamp(6.5rem, 10vw, 9rem);
+  padding-bottom: 2rem;
+}
+
+.customize__head h1 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  margin: 0.5rem 0 0.9rem;
+}
+
+.customize__head p {
+  max-width: 480px;
+}
+
+.customize__body {
+  padding-top: 0;
+}
+
+.customize__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: flex-start;
+}
+
+.customize__tablist {
+  display: flex;
+  gap: 0;
+  list-style: none;
+  margin: 0 0 2.5rem;
+  padding: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.customize__tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  padding: 0.9rem 1.3rem 0.9rem 0;
+  margin-right: 1.5rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 2px solid transparent;
+  transform: translateY(1px);
+}
+
+.customize__tab-index {
+  font-size: 0.7rem;
+  color: var(--gold-deep);
+}
+
+.customize__tab.is-active {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.customize__panel {
+  min-height: 220px;
+}
+
+.customize__options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.option-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 1.4rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  text-align: left;
+  transition: border-color 0.2s ease;
+}
+
+.option-card.is-selected {
+  border-color: var(--ink);
+}
+
+.option-card__swatch {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.option-card__name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+}
+
+.option-card__price {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.customize__engraving {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 360px;
+}
+
+.customize__engraving label {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.customize__engraving input {
+  border: none;
+  border-bottom: 1px solid var(--ink);
+  background: transparent;
+  padding: 0.7rem 0.1rem;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.customize__engraving input:focus {
+  outline: none;
+  border-color: var(--gold-deep);
+}
+
+.customize__engraving-note {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.customize__nav {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.customize__nav .btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.customize__nav .btn:disabled:hover {
+  background: transparent;
+  color: var(--ink);
+}
+
+.customize__confirm {
+  margin-top: 1.2rem;
+  font-size: 0.85rem;
+  color: var(--gold-deep);
+}
+
+.customize__preview {
+  position: sticky;
+  top: 110px;
+}
+
+.customize__preview-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.customize__preview-visual {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: background 0.3s ease;
+}
+
+.customize__preview-stone {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  transition: background 0.3s ease;
+}
+
+.customize__preview-engraving {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: var(--font-display);
+  letter-spacing: 0.18em;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.customize__summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin: 0 0 1.4rem;
+}
+
+.customize__summary div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.customize__summary dt {
+  color: var(--muted);
+}
+
+.customize__summary dd {
+  margin: 0;
+  color: var(--ink);
+}
+
+.customize__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.customize__total strong {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--ink);
+}
+
+@media (max-width: 920px) {
+  .customize__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .customize__preview {
+    position: static;
+    order: -1;
+  }
+
+  .customize__options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .customize__options {
+    grid-template-columns: 1fr;
+  }
+}
